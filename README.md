@@ -16,8 +16,8 @@ nézzétek meg a megoldást.
 
 ### List
 
-- **list.blockbuster**
-- **list.basiclist**
+- **list.blockbuster**       done
+- **list.basiclist**         in progress
 
 
 - *list.manufactory*
