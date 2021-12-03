@@ -17,7 +17,7 @@ nézzétek meg a megoldást.
 ### List
 
 - **list.blockbuster**       done
-- **list.basiclist**         in progress, 01
+- **list.basiclist**         in progress
 
 
 - *list.manufactory*
