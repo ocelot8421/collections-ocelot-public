@@ -1,5 +1,7 @@
 package hu.progmasters.list.basiclist;
 
+import com.sun.jdi.IntegerValue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,13 @@ public class List04 {
         // Note this two available approaches
         // - remove(int index)
         // - remove(Object o)
-
+        arrayList.remove((Object)2);
+        System.out.println(arrayList);
+        arrayList.remove(Integer.valueOf(4));
+        System.out.println(arrayList);
+        arrayList.remove(0);
+        System.out.println(arrayList);
+        arrayList.removeAll(arrayList);
         System.out.println(arrayList);
     }
 
