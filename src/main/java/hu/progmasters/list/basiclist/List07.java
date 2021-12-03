@@ -10,7 +10,8 @@ public class List07 {
         List<Integer> list = new ArrayList<>(Arrays.asList(2, 4, 6, 8, 10, 12, 14, 16));
         // Check if list contains all of the following elements: 4,8,12,16
         // Print "true" if it contains them all, otherwise print "false"
-
-
+        System.out.println(
+                (list.containsAll(Arrays.asList(4, 8, 12, 16)))
+        );
     }
 }
