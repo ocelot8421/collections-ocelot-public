@@ -15,8 +15,9 @@ public class List05 {
             }
             arrayList.add("" + i);
         }
+        System.out.println(arrayList);
         // Remove "removable" from the list, but without using the index of the element.
-
+        arrayList.remove("removable");
         System.out.println(arrayList);
     }
 }
