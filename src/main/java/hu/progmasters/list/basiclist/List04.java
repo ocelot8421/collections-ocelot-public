@@ -19,13 +19,17 @@ public class List04 {
         // Note this two available approaches
         // - remove(int index)
         // - remove(Object o)
-        arrayList.remove((Object)2);
+        System.out.println("arrayList.remove((Integer)2):");
+        arrayList.remove((Integer)2);
         System.out.println(arrayList);
+        System.out.println("arrayList.remove(Integer.valueOf(4)):");
         arrayList.remove(Integer.valueOf(4));
         System.out.println(arrayList);
         arrayList.remove(0);
+        System.out.println("arrayList.remove(0);");
         System.out.println(arrayList);
         arrayList.removeAll(arrayList);
+        System.out.println("arrayList.removeAll(arrayList);");
         System.out.println(arrayList);
     }
 
