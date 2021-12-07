@@ -20,12 +20,12 @@ nézzétek meg a megoldást.
 - **list.basiclist**         done
 
 
-- *list.manufactory*
+- *list.manufactory*         in next sprint
 
 ### Set/Queue
 
-- **setqueue.lottery**      in progress
-- **setqueue.task**
+- **setqueue.lottery**      done
+- **setqueue.task**         in progress
 
 
 - *setqueue.sandwich*
