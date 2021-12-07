@@ -1,9 +1,10 @@
 package hu.progmasters.setqueue.lottery;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class LotteryTicket {
-    protected Set<Integer> numbers;
+    protected Set<Integer> numbers = new HashSet<>();
 
     public void markNumber(int number) {
         if (number >= 1 && number <= 30){
