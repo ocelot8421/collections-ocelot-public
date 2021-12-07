@@ -17,14 +17,14 @@ nézzétek meg a megoldást.
 ### List
 
 - **list.blockbuster**       done
-- **list.basiclist**         in progress
+- **list.basiclist**         done
 
 
 - *list.manufactory*
 
 ### Set/Queue
 
-- **setqueue.lottery**
+- **setqueue.lottery**      in progress
 - **setqueue.task**
 
 
