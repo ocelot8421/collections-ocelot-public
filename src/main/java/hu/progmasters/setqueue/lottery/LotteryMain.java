@@ -29,8 +29,7 @@ public class LotteryMain {
 
     public static void main(String[] args) {
         LotteryShop lotteryShop = new LotteryShop();
-        lotteryShop.buyTicket();
-        lotteryShop.buyTicket();
+
         lotteryShop.buyTicket();
 
         lotteryShop.doLottery();

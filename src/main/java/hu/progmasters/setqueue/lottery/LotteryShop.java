@@ -1,6 +1,5 @@
 package hu.progmasters.setqueue.lottery;
 
-import java.security.SecureRandom;
 import java.util.*;
 
 public class LotteryShop {
@@ -39,7 +38,7 @@ public class LotteryShop {
         }
 
         for (int i = 0; i < 6; i++) {
-            randomIndex = random.nextInt(30 - i);
+            randomIndex = random.nextInt(45 - i);
             int randomNumber = allNumbers.get(randomIndex);
             if (!randomList.contains(randomNumber)) {
                 randomList.add(randomNumber);
