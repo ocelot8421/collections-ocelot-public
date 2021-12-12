@@ -1,10 +1,7 @@
 package hu.progmasters.setqueue.lottery;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class LotteryShop {
     protected List<LotteryTicket> tickets = new ArrayList<>();
@@ -15,18 +12,23 @@ public class LotteryShop {
         LotteryTicket lotteryTicket = new LotteryTicket();
         int markedNumber;
 
+        System.out.println("Mely számokat szeretnéd megjelölni? (1 - 45)");
         while (!lotteryTicket.isValid()) {
-            System.out.println("Melyik számot szeretnéd megjelölni? (1 - 30)");
             markedNumber = scanner.nextInt();
             scanner.nextLine();
             lotteryTicket.markNumber(markedNumber);
         }
 
         tickets.add(lotteryTicket);
-        System.out.println("Sikeresen kitöltötted a szelvényt " + lotteryTicket.numbers);
+
+
+        List<Integer> numbersSorted = new ArrayList<>(lotteryTicket.numbers);
+
+        Collections.sort(numbersSorted);
+        System.out.println("Sikeresen kitöltötted a szelvényt " + numbersSorted);
     }
 
-    public boolean doLottery() {
+    public void doLottery() {
         List<Integer> allNumbers = new ArrayList<>();
         List<Integer> randomList = new ArrayList<>();
         Random random = new Random();
@@ -35,9 +37,8 @@ public class LotteryShop {
         for (int i = 1; i <= 30; i++) {
             allNumbers.add(i);
         }
-//        System.out.println("allNumbers: " + allNumbers);
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 6; i++) {
             randomIndex = random.nextInt(30 - i);
             int randomNumber = allNumbers.get(randomIndex);
             if (!randomList.contains(randomNumber)) {
@@ -48,13 +49,31 @@ public class LotteryShop {
         }
         System.out.println("Nyertes számok: " + randomList);
 
-        boolean winOrNot = false;
+        boolean winOrNot;
+        List<Integer> sortedMarkedNumbers = new ArrayList<>();
+        int sameNumbers;
         for (LotteryTicket ticket : tickets) {
-            winOrNot = randomList.containsAll(ticket.numbers);
-            System.out.println("Nyert? " + winOrNot + " " + ticket.numbers);
+            winOrNot = ticket.isWinner(randomList);
+            String result = winOrNot ? "Igen" : "Nem";
+            sameNumbers = sameNumbers(ticket.numbers, randomList);
+            sortedMarkedNumbers.addAll(ticket.numbers);
+            Collections.sort(sortedMarkedNumbers);
+            System.out.println("Nyert? " + result + " " + sortedMarkedNumbers + "\n" +
+                    "   Találatok száma: " + sameNumbers);
+            sortedMarkedNumbers.clear();
         }
 
         randomList.clear();
-        return winOrNot;
     }
+
+    private int sameNumbers(Set<Integer> markedNumbers, List<Integer> winnerNumbers) {
+        int counter = 0;
+        for (Integer markedNumber : markedNumbers) {
+            if (winnerNumbers.contains(markedNumber)) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
 }

@@ -1,6 +1,7 @@
 package hu.progmasters.setqueue.task;
 
 import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -50,13 +51,24 @@ public class TaskPlanner {
 
     public void doTask() {
         Task taskOldest = taskQueue.remove();
-        System.out.println("Elkészült: " + taskOldest.getDescription() + " , " + taskOldest.getTime());
+        System.out.println("Elkészült: " + taskOldest.getDescription() + " - " + taskOldest.getTime());
+        System.out.println("  További feladatok: " + showQueueContent());
     }
+
+    private StringBuilder showQueueContent(){
+        StringBuilder content = new StringBuilder();
+        for (Task task : taskQueue) {
+            content.append(task.getDescription()).append(" - ").append(task.getTime()).append("\n");
+        }
+        return content;
+    }
+
 
     public void previewTask() {
         Task actualTask = taskQueue.peek();
         if (actualTask != null)
-            System.out.println("Elkészült: " + actualTask.getDescription() + " , " + actualTask.getTime());
+            System.out.println("Elkészült: " + actualTask.getDescription() + " - " + actualTask.getTime());
     }
+
 
 }

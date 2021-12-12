@@ -16,23 +16,23 @@ nézzétek meg a megoldást.
 
 ### List
 
-- **list.blockbuster**       done
-- **list.basiclist**         done
+- **list.blockbuster**              done
+- **list.basiclist**                done
 
 
-- *list.manufactory*         in next sprint
+- *list.manufactory*                next sprint
 
 ### Set/Queue
 
-- **setqueue.lottery**      done
-- **setqueue.task**         in progress
+- **setqueue.lottery**              done
+- **setqueue.task**                 done
 
 
-- *setqueue.sandwich*
+- *setqueue.sandwich*               next sprint
 
 
 ### Comparator, comparable
-- **comparator.reversenumbers**
+- **comparator.reversenumbers**     in progress
 
 
 - *comp.book*
