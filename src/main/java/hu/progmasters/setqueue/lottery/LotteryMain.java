@@ -31,6 +31,7 @@ public class LotteryMain {
         LotteryShop lotteryShop = new LotteryShop();
 
         lotteryShop.buyTicket();
+        lotteryShop.buyTicket();
 
         lotteryShop.doLottery();
     }

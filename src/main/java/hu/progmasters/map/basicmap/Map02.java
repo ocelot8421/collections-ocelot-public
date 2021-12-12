@@ -15,10 +15,13 @@ public class Map02 {
         map.put(555, 555.555);
 
         // Írd ki konzolra a kulcs-érték párokat
+        System.out.println(map);
 
         // Ürítsd ki a map-et
+        map.clear();
 
         // Vizsgáld meg, hogy hány eleme van a map-nek a törlés után
+        System.out.println(map.size());
     }
 
 }

@@ -6,7 +6,6 @@ public class ReverseIntComparator implements Comparator<Integer> {
 
     @Override
     public int compare(Integer firstNumber, Integer secondNumber) {
-        // TODO csak 0-t, 1-et vagy -1-et returnölj!
-        return 0;
+        return secondNumber.compareTo(firstNumber);
     }
 }

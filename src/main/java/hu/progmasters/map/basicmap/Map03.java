@@ -15,7 +15,9 @@ public class Map03 {
         map.put(5, "EEE");
 
         // Írd ki a konzolra csak a mapben szereplő kulcsokat
+        System.out.println(map.keySet());
 
         // Írd ki a konzolra csak a map-ben szereplő értékeket
+        System.out.println(map.values());
     }
 }

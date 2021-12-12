@@ -33,7 +33,7 @@ public class LotteryShop {
         Random random = new Random();
         int randomIndex;
 
-        for (int i = 1; i <= 30; i++) {
+        for (int i = 1; i <= 45; i++) {
             allNumbers.add(i);
         }
 
@@ -46,6 +46,7 @@ public class LotteryShop {
             allNumbers.remove(randomIndex);
 //            System.out.println(allNumbers);
         }
+        Collections.sort(randomList);
         System.out.println("Nyertes számok: " + randomList);
 
         boolean winOrNot;
@@ -58,7 +59,7 @@ public class LotteryShop {
             sortedMarkedNumbers.addAll(ticket.numbers);
             Collections.sort(sortedMarkedNumbers);
             System.out.println("Nyert? " + result + " " + sortedMarkedNumbers + "\n" +
-                    "   Találatok száma: " + sameNumbers);
+                    "   Találatok száma: " + sameNumbers + " db " + sameNumbersList(ticket.numbers, randomList));
             sortedMarkedNumbers.clear();
         }
 
@@ -73,6 +74,16 @@ public class LotteryShop {
             }
         }
         return counter;
+    }
+
+    private List<Integer> sameNumbersList(Set<Integer> markedNumbers, List<Integer> winnerNumbers) {
+        List<Integer> sameNumbres = new ArrayList<>();
+        for (Integer markedNumber : markedNumbers) {
+            if (winnerNumbers.contains(markedNumber)) {
+                sameNumbres.add(markedNumber);
+            }
+        }
+        return sameNumbres;
     }
 
 }

@@ -15,10 +15,13 @@ public class Map05 {
         map.put("FIVE", "EEE");
 
         // A THREE értékét írd át 333-ra
+        map.replace("THREE", "333");
 
         // Ha a FOUR értéke DDD, akkor írd felül 444-re
+        map.replace("FOUR", "DDD", "444");
 
         // Írd ki konzolra a kulcs-érték párokat
+        System.out.println(map);
     }
 
 }

@@ -32,14 +32,14 @@ nézzétek meg a megoldást.
 
 
 ### Comparator, comparable
-- **comparator.reversenumbers**     in progress
+- **comparator.reversenumbers**     done
 
 
 - *comp.book*
 
 ### Map
 
-- **map.basicmap**
+- **map.basicmap**                  in progress
 
 
 - *map.dictionary*

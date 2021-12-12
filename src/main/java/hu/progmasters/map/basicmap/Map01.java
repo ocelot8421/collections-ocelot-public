@@ -14,10 +14,13 @@ public class Map01 {
         map.put("FOUR", 4);
 
         // Add hozzá a map-hez a 'ONE-111' kulcs-érték párt, de csak akkor, ha a ONE nincs jelen a map-ben.
+        map.putIfAbsent("ONE", 111);
 
         // Add hozzá a map-hez a 'FIVE-5' kulcs-érték párt, de csak akkor, ha a FIVE nincs jelen a map-ben.
+        map.putIfAbsent("FIVE", 5);
 
         // Írasd ki a konzolra a map kulcs-érték párjait
+        System.out.println(map);
 
     }
 
